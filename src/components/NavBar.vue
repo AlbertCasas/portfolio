@@ -97,4 +97,10 @@ const close = ref(" />")
     color: #1DFCDB;
 }
 
+@media only screen and (max-width: 1250px) {
+    .navbar {
+        gap: 0;
+    }
+}
+
 </style>

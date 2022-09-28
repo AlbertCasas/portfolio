@@ -76,4 +76,10 @@ const closeTag = ref("</h1>")
     right: 0;
   }
 
+@media only screen and (max-width: 820px) {
+  .decoration {
+    display: none;
+  }
+}
+
 </style>
