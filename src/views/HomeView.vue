@@ -131,9 +131,9 @@ const closeTag = ref("</h1>")
   }
 }
 
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 500px) {
   .text {
-    margin-top: 5rem;
+    margin-top: 3rem;
     margin-left: 2rem;
     font-size: 1.3rem;
   }
