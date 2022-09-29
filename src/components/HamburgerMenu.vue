@@ -8,7 +8,7 @@
     </div>
     <div class="menu" :class="{
         'active': active}">
-        <RouterLink class="burger-button" to="/about">About</RouterLink>
+        <RouterLink class="burger-button first" to="/about">About</RouterLink>
         <RouterLink class="burger-button" to="/projects">Projects</RouterLink>
         <RouterLink class="burger-button" to="/contact">Contact</RouterLink>
     </div>
@@ -50,12 +50,29 @@ const toggleBurger = () => {
 
 .menu {
     display: none;
+    background-color: #303030;
+    width: 10rem;
+    height: 9rem;
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    top: 5rem;
+    right: 0;
+    box-shadow: 1px 2px 4px black;
+    text-align: center;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .burger-button {
     background-color: #303030;
     text-decoration: none;
     color: white;
+    font-size: 1.2rem;
+}
+
+.first {
+    margin-top: 1rem;
 }
 
 @media only screen and (max-width: 500px) {
@@ -69,25 +86,8 @@ const toggleBurger = () => {
         background-color: #303030;
     }
 
-
-
-    .menu {
-        display: block
-    }
-
     .menu.active {
-        background-color: #303030;
-        width: 10rem;
-        height: 8rem;
         display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        position: absolute;
-        top: 5rem;
-        right: 0;
-        text-align: center;
-        -webkit-transition: all 0.3s ease-in-out;
-        transition: all 0.3s ease-in-out;
     }
 
     .hamburger.active .bar:nth-child(2){
