@@ -1,7 +1,7 @@
 <template>
 <div class="footer">
     <div class="first-row">
-        <div class="text">
+        <div class="footer-text">
             <p>If you are interested in<br> working with me</p>
         </div>
         <div class="router-links">
@@ -10,7 +10,7 @@
         </div>
     </div>
     <div class="second-row">
-        <div class="button">
+        <div class="footer-button">
             <RouterLink class="contact-me" to="/contact">CONTACT ME</RouterLink>
         </div>
         <div class="social">
@@ -19,10 +19,15 @@
         </div>
     </div>
 
-</div>
+  </div>
 </template>
 
 <script setup>
+import {computed} from 'vue'
+
+const mobile = computed(() => {
+    return this.$vuetify.breakpoint.sm
+})
 
 </script>
 
@@ -45,14 +50,14 @@
     justify-content: space-between;
 }
 
-.text {
+.footer-text {
     width: 13rem;
     background-color: #303030;
     color: white;
     font-size: 1.2rem;   
 }
 
-.text p {
+.footer-text p {
     background-color: #303030;
 }
 
@@ -106,5 +111,14 @@ a {
 img {
     width: 2rem;
     background-color: #303030;
+}
+
+@media only screen and (max-width: 414px) {
+    
+    .footer {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    } 
 }
 </style>

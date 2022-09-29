@@ -128,7 +128,7 @@ const close = ref(" />")
 @media only screen and (max-width: 880px) {
 
     .title {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 
     .icon img {
@@ -144,7 +144,7 @@ const close = ref(" />")
     }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 550px) {
 
     .title {
         font-size: 1.5rem;

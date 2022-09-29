@@ -13,14 +13,14 @@
   <div class="button">
     <RouterLink class="contact-me" to="/contact">CONTACT ME</RouterLink>
   </div>
-  <FooterMobile v-show="$vuetify.breakpoint.xs" />
+  <FooterMobile class="footer" />
 </div>
 </template>
 
 <script setup>
 import NavBar from '../components/NavBar.vue'
-import {ref} from 'vue'
 import FooterMobile from '../components/FooterMobile.vue'
+import {ref} from 'vue'
 
 
 const openTag = ref("<h1>")
@@ -78,6 +78,7 @@ const closeTag = ref("</h1>")
   margin-left: 6rem;
   margin-top: 4rem;
   display: none;
+  
 }
 
 .contact-me {
@@ -89,9 +90,7 @@ const closeTag = ref("</h1>")
   font-weight: 900;
 }
 
-.footer {
-  display: none;
-}
+
 
 @media only screen and (max-width: 1500px) {
 
@@ -142,12 +141,14 @@ const closeTag = ref("</h1>")
   .button {
     display: none;
   }
-}
 
-.footer {
+  .footer {
   display: block;
   position: absolute;
   bottom: 0;
+  } 
 }
+
+
 
 </style>
