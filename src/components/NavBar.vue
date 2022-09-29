@@ -13,7 +13,12 @@
             <a class="icon" href="https://www.linkedin.com/in/albertcasas3d/" target="_blank"><img src="https://i.ibb.co/74TGDbM/linkdn.png" alt="linkdn" border="0"></a>
             <a class="icon" href="https://github.com/AlbertCasas" target="_blank"><img src="https://i.ibb.co/xXTj41w/Recurso-8.png" alt="Recurso-8" border="0"></a>
         </div>
-    </div>   
+    </div>  
+    <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div> 
 </nav>
 </template>
 
@@ -22,6 +27,8 @@ import {ref} from 'vue'
 
 const open = ref("<")
 const close = ref(" />")
+
+
 
 </script>
 
@@ -93,13 +100,83 @@ const close = ref(" />")
     background-color: #303030;
 }
 
+.hamburger {
+    display: none;
+    cursor: pointer;
+    background-color: #303030;
+}
+
+.bar {
+    display: block;
+    width: 23px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white
+}
+
 .router-link-active {
     color: #1DFCDB;
 }
 
-@media only screen and (max-width: 1250px) {
+@media only screen and (max-width: 1500px) {
     .navbar {
         gap: 0;
+    }
+}
+@media only screen and (max-width: 880px) {
+
+    .title {
+        font-size: 1.2rem;
+    }
+
+    .icon img {
+        width: 1.7rem;
+    }
+
+    .router {
+        gap: 1.5rem;
+    }
+
+    .links {
+        gap: 2rem;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .icons {
+        padding-left: 1rem;
+    }
+
+    .router {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+        padding: 1rem;
+    }
+
+    .hamburger.active {
+        background-color: #c8c8c8;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
     }
 }
 
