@@ -1,14 +1,56 @@
 <template>
 <div class="wrapper">
-  <NavBar />
-  <ProjectsComp />
+  <div class="projects-wrapper">
+    <div class="project-note">
+      <img src="https://i.ibb.co/rGg6mNb/Recurso-22.png" alt="Recurso-22" border="0">
+      <div class="overlay">
+        <div class="info">
+          <h1>Note It!</h1>
+          <p>A To Do App where you can register and login to your account and create your tasks, mark them as completed, edit your taks and delete them.</p>
+          <div class="bottom">
+            <span>Vue.js  -  Supabase</span>
+            <a href="https://note-it-project.vercel.app/auth/login" target="_blank"><button>VISIT</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="project-weather">
+      <img src="https://i.ibb.co/CVxDXFP/Recurso-23-1.png" alt="Recurso-23-1" border="0">
+      <div class="overlay">
+        <div class="info">
+          <h1>WeatherApp</h1>
+          <p>A Weather App where you can add cities around the world to check detailed weather forecast of every city you want.</p>
+          <div class="bottom">
+            <span>Vue.js  -  Firebase</span>
+            <a href="https://weather-app-zeta-sooty.vercel.app/" target="_blank"><button>VISIT</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="project-circle">
+      <img src="https://i.ibb.co/vxTb8C2/Recurso-24.png" alt="Recurso-24" border="0">
+      <div class="overlay">
+        <div class="info">
+          <h1>Circle Clone</h1>
+          <p>This is a clone of Circle agency webpage responsive for mobiles and desktop. The projects section information comes from a fake API.</p>
+          <div class="bottom">
+            <span>HTML - CSS - JavaScript</span>
+            <a href="https://circle-cloning.vercel.app/" target="_blank"><button>VISIT</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <img class="decoration" src="https://i.ibb.co/DrL0JP4/Recurso-10.png" alt="Recurso-10" border="0">
+  <img class="title-section" src="https://i.ibb.co/kJWThth/PROJECTS-2x.png" alt="PROJECTS-2x" border="0">
+  
   
 </div>
 </template>
 
 <script setup>
-import NavBar from '../components/NavBar.vue'
-import ProjectsComp from '../components/ProjectsComp.vue'
+
 
 </script>
 

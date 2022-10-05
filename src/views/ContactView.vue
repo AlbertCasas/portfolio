@@ -91,7 +91,7 @@ const sendMessage = () => {
 
 .contact-form {
     width: 60rem;
-    height: 32rem;
+    height: 31.4rem;
     border: 4px solid #1DFCDB;
     border-radius: 7px;
     position: absolute;

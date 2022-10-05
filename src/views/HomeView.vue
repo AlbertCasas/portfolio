@@ -20,6 +20,7 @@
 <script setup>
 import NavBar from '../components/NavBar.vue'
 import FooterMobile from '../components/FooterMobile.vue'
+import AboutComp from '../components/AboutComp.vue'
 import {ref} from 'vue'
 
 
@@ -30,7 +31,7 @@ const closeTag = ref("</h1>")
 
 <style scoped>
   .home-wrapper {
-    height: 100vh;
+    min-height: 100vh;
     background-color:  #393939;
     width: 100%;
     position: relative;
@@ -67,13 +68,6 @@ const closeTag = ref("</h1>")
   }
 
 
-.decoration {
-    max-width: 19rem;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-  }
-
 .button {
   margin-left: 6rem;
   margin-top: 4rem;
@@ -89,7 +83,6 @@ const closeTag = ref("</h1>")
   color: #393939;
   font-weight: 900;
 }
-
 
 
 @media only screen and (max-width: 1500px) {

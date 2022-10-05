@@ -50,6 +50,7 @@ const close = ref(" />")
     color: #1DFCDB;
     text-decoration: none;
     font-size: 2rem;
+    font-weight: bold;
     background-color: #303030;
 }
 
