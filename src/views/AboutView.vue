@@ -2,7 +2,7 @@
   <div class="about-view">
     <NavBar />
     <AboutComp />
-    <FooterMobile class="footer"/>
+    <FooterMobile />
   </div>
 </template>
 
@@ -17,11 +17,9 @@ import FooterMobile from '../components/FooterMobile.vue'
 
 <style scoped>
 .about-view {
-  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
-.footer {
-  position: sticky;
-  bottom: 0;
-}
+
 </style>

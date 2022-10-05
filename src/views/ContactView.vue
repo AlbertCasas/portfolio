@@ -1,30 +1,35 @@
 <template>
 <div class="wrapper">
     <NavBar />
-    <p class="message">Send me a <span>message</span> or contact me on <a class="linkedin-link" href="https://www.linkedin.com/in/albertcasas3d/" target="_blank"><span>Linkedin</span></a>.</p>
-    <div class="contact-form">
-        <form class="form">
-            <div class="name-email">
-			    <input class="input" required name="name" placeholder="Name" type="text" autocomplete="off" v-model="name">
-			    <input class="input input-email" required name="email" placeholder="Email" type="email" autocomplete="off" v-model="email">
+    <div class="form-wrapper">
+        <div class="form-message">
+            <h1 class="contact-title">CONTACT</h1>
+            <p class="message">Send me a <span>message</span> or contact me on <a class="linkedin-link" href="https://www.linkedin.com/in/albertcasas3d/" target="_blank"><span>Linkedin</span></a>.</p>
+            <div class="contact-form">
+                <form class="form">
+                    <div class="name-email">
+                        <input class="input" required name="name" placeholder="Name" type="text" autocomplete="off" v-model="name">
+                        <input class="input input-email" required name="email" placeholder="Email" type="email" autocomplete="off" v-model="email">
+                    </div>
+                    <input class="input" required name="subject" placeholder="Subject" type="text" autocomplete="off" v-model="subject">
+                    <textarea class="input input-message" name="message" rows="4" placeholder="Message" v-model="message"></textarea>
+                    <div class="button-err-msg">
+                        <div class="err-msg-wrapper">
+                            <p v-if="errorMsg" class="err-msg">{{ errorMsg }}</p>
+                        </div>
+                        <button @click.prevent="sendMessage" class="button" type="submit">SEND</button>
+                    </div>
+                </form>
             </div>
-            <input class="input" required name="subject" placeholder="Subject" type="text" autocomplete="off" v-model="subject">
-			<textarea class="input input-message" name="message" rows="4" placeholder="Message" v-model="message"></textarea>
-		    <button @click.prevent="sendMessage" class="button" type="submit">SEND</button>
-		</form>
+        </div>
     </div>
-    <p v-if="errorMsg" class="err-msg">{{ errorMsg }}</p>
-    <img class="decoration" src="https://i.ibb.co/DrL0JP4/Recurso-10.png" alt="Recurso-10" border="0">
-    <img class="title-section" src="https://i.ibb.co/TtrFrpT/CONTACT-2x.png" alt="CONTACT-2x" border="0">
-    <span class="tags open-tag">{{openTag}}</span>
-    <span class="tags close-tag">{{closeTag}}</span>
-    <a href="https://github.com/AlbertCasas" target="_blank"><img class="icon github" src="https://i.ibb.co/NSWFjF3/Recurso-1-2.png" alt="Recurso-1-2" border="0"></a>
-    <a href="https://www.linkedin.com/in/albertcasas3d/" target="_blank"><img class="icon linkedin" src="https://i.ibb.co/4RnJ29W/Recurso-2.png" alt="Recurso-2" border="0"></a>
+    <FooterMobile />
 </div>    
 </template>
 
 <script setup>
 import NavBar from '../components/NavBar.vue'
+import FooterMobile from '../components/FooterMobile.vue'
 import {ref} from 'vue'
 import projectFirestore from "../firebase/firebaseconfig"
 
@@ -66,17 +71,38 @@ const sendMessage = () => {
 
 <style scoped>
 .wrapper {
-    height: 100vh;
+    
     background-color:  #393939;
     width: 100%;
-    position: relative;
+    background-image: url("https://i.ibb.co/HztbQhy/Recurso-25.png");
+    background-position: bottom 0 right 0;
+    background-size: 19rem;
+    background-repeat: no-repeat;
+}
+
+.form-wrapper {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+}
+
+.contact-title {
+  color: #1dfcdb;
+  font-weight: 900;
+  font-size: 2.5rem;
+  display: none;
+}
+
+.form-message {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0 5rem 0 12rem;
 }
 
 .message {
     color: white;
-    position: absolute;
-    left: 15.5rem;
-    top: 15rem;
     font-size: 1.5rem;
     cursor: default;
 }
@@ -90,13 +116,12 @@ const sendMessage = () => {
 }
 
 .contact-form {
-    width: 60rem;
-    height: 31.4rem;
+    min-width: 60rem;
+    max-width: 75rem;
+    min-height: 29.4rem;
+    max-height: 60rem;
     border: 4px solid #1DFCDB;
     border-radius: 7px;
-    position: absolute;
-    left: 15.5rem;
-    top: 18rem;
 }
 
 .form {
@@ -138,10 +163,21 @@ const sendMessage = () => {
     height: 10rem;
 }
 
+.button-err-msg {
+    display: flex;
+    gap: 2rem;
+    justify-self: flex-end;
+    align-items: center;
+}
+
+.err-msg-wrapper {
+    width: 28.5rem;
+}
+
 .button {
     width: 25rem;
     padding: .8rem;
-    margin: 2rem 2rem 0 2rem;
+    margin: 2rem 2rem 2rem 2rem;
     font-size: 1.2rem;
     font-weight: 900;
     color: #393939;
@@ -159,56 +195,146 @@ const sendMessage = () => {
     color: #1DFCDB;
     font-size: 1.2rem;
     margin-left: 2.8rem;
-    position: absolute;
-    left: 15.5rem;
-    top: 45rem;
 }
 
-.decoration {
-    max-width: 19rem;
-    position: absolute;
-    bottom: 0;
-    right: 0;
+
+@media only screen and (max-width: 1500px) {
+  .wrapper {
+    background-image: none;
+  }
+
+  .contact-title {
+    display: block;
+  }
+
+  .form-message {
+    margin: 0 5rem 0 8rem;
+  }
 }
 
-.title-section {
-    position: absolute;
-    right: 0;
-    top: 15rem;
-    background: transparent;
-    width: 5rem;
+@media only screen and (max-width: 1300px) {
+    .contact-form {
+        min-width: 45rem;
+        max-width: 55rem;
+        min-height: 19.4rem;
+        max-height: 40rem;
+    }
+
+    
+    .name-email .input {
+        width: 18rem;
+    }
+
+    .input-message {
+        height: 8rem;
+    }
 }
 
-.tags {
-    font-size: 1.2rem;
-    color: #747474;
-    cursor: default;
+@media only screen and (max-width: 1000px) {
+    .contact-form {
+        min-width: 35rem;
+        max-width: 45rem;
+        min-height: 26.4rem;
+    }
+
+    .form-message {
+        margin-left: 5rem;
+    }
+    
+    .name-email .input {
+        width: 18rem;
+    }
+
+    .input-message {
+        height: 5rem;
+    }
 }
 
-.open-tag {
-    position: absolute;
-    top: 21rem;
-    left: 11rem;
+@media only screen and (max-width: 880px) {
+    
+    .form-message {
+        margin-left: 5rem;
+    }
+
+    .contact-form {
+        min-width: 40rem;
+    }
+
+    .input {
+        margin: 1.5rem 1.5rem 0 1.5rem;
+    }
+
+    .name-email .input {
+        width: 16rem;
+    }
+
+    .err-msg-wrapper {
+    width: 25rem;
+}
+    
 }
 
-.close-tag {
-    position: absolute;
-    top: 45.5rem;
-    left: 77rem;
+@media only screen and (max-width: 775px) {
+    .form-message {
+        margin-left: 5rem;
+    }
+
+    .contact-form {
+        min-width: 30rem;
+        max-width: 30rem;
+    }
+
+    .name-email {
+        flex-direction: column;
+    }
+
+    .name-email .input {
+        width: 25rem;
+    }
+
+
+    .button {
+        width: 15rem;
+        padding: .5rem;
+    }
 }
 
-.icon {
-    position: absolute;
-    width: 4rem;
+@media only screen and (max-width: 600px){
+    .form-message {
+        margin-left: 3rem;
+    }
+
+    .contact-form {
+        min-width: 25rem;
+        max-width: 25rem;
+    }
+
+    .name-email .input {
+        width: 20rem;
+    }
+
 }
 
-.github {
-    top: 27rem;
-    right: 30rem;
-}
+@media only screen and (max-width: 450px) {
 
-.linkedin {
-    top: 35rem;
-    right: 30rem;
+    .form-message {
+        margin-left: 1.5rem;
+        margin-top: 7rem;
+        margin-bottom: 7rem;
+    }
+
+    .contact-form {
+        min-width: 20rem;
+        max-width: 20rem;
+    }
+
+    .name-email .input {
+        width: 15rem;
+    }
+
+    .err-msg {
+        font-size: 1rem;
+        margin-left: 1.5rem;
+    }
 }
 </style>

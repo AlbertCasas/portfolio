@@ -41,6 +41,7 @@ const mobile = computed(() => {
     box-shadow: 1px -2px -1px rgba(0,0,0,0.5);
     position: relative;
     display: none;
+    margin-top: 2rem;
 }
 
 .first-row {
@@ -113,12 +114,10 @@ img {
     background-color: #303030;
 }
 
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 500px) {
     
     .footer {
     display: block;
-    position: absolute;
-    bottom: 0;
     } 
 }
 </style>

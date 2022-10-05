@@ -58,6 +58,7 @@ const toggleBurger = () => {
     position: absolute;
     top: 5rem;
     right: 0;
+    z-index: 99;
     box-shadow: 1px 2px 4px black;
     text-align: center;
     -webkit-transition: all 0.3s ease-in-out;
@@ -75,7 +76,7 @@ const toggleBurger = () => {
     margin-top: 1rem;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
 
     .hamburger {
         display: block;

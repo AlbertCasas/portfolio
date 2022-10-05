@@ -41,7 +41,6 @@
         
     </div>
     </div>
-    
 </div>
 </template>
 
@@ -53,13 +52,6 @@ import { useRouter, useRoute } from 'vue-router'
 const openTag = ref("<ul>");
 const closeTag = ref("</ul>");
 
-const aboutRoute = ref(true)
-
-const isHome = computed(() => {
-  if($route.path === "/") {
-    aboutRoute.value === false
-  }
-})
 </script>
 
 <style scoped>
@@ -174,6 +166,7 @@ li::before {
     align-content: space-between;
     gap: 5rem;
     padding-top: 7rem;
+    margin-right: 14rem;
   }
 
   .text-button {
@@ -189,6 +182,9 @@ li::before {
 
   .text-skills {
     padding-top: 4rem;
+    margin-right: 0;
+    align-items: flex-start;
+    margin-left: 4rem;
   }
   
   .about-text {
@@ -196,14 +192,18 @@ li::before {
   }
 
   .all-skills {
-    margin-left: 8rem;
+    margin-left: 2rem;
   }
 }
 
 @media only screen and (max-width: 500px) {
-  
+  .about-wrapper {
+    height: 110vh;
+  }
+
   .text-skills {
     padding-top: 2rem;
+    margin-left: 2rem;
   }
 
   .text-button {
@@ -212,6 +212,7 @@ li::before {
 
   .about-title {
     font-size: 2rem;
+    margin-bottom: 1rem;
   }
   
   .about-text {
@@ -221,6 +222,7 @@ li::before {
 
   .all-skills {
     margin: 0;
+    margin-left: 2.5rem;
   }
 
   .all-skills li {

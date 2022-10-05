@@ -1,5 +1,6 @@
 <template>
 <div class="wrapper">
+    <h1 class="projects-title">PROJECTS</h1>
   <div class="projects-wrapper">
     <div class="project-note">
       <img src="https://i.ibb.co/rGg6mNb/Recurso-22.png" alt="Recurso-22" border="0">
@@ -40,12 +41,7 @@
         </div>
       </div>
     </div>
-    
   </div>
-  <img class="decoration" src="https://i.ibb.co/DrL0JP4/Recurso-10.png" alt="Recurso-10" border="0">
-  <img class="title-section" src="https://i.ibb.co/kJWThth/PROJECTS-2x.png" alt="PROJECTS-2x" border="0">
-  
-  
 </div>
 </template>
 
@@ -61,11 +57,23 @@
     width: 100%;
     position: relative;
     overflow: auto;
+    background-image: url("https://i.ibb.co/yyL8CFD/Recurso-26.png");
+    background-position: bottom 0 right 0;
+    background-size: 19rem;
+    background-repeat: no-repeat;
   }
 
   .wrapper::-webkit-scrollbar {
   width: 0px;
   background: transparent;
+}
+
+.projects-title {
+  color: #1dfcdb;
+  font-weight: 900;
+  font-size: 2.5rem;
+  display: none;
+  margin: 2rem 10rem;
 }
 
 .projects-wrapper::-webkit-scrollbar {
@@ -80,7 +88,7 @@
 .projects-wrapper {
   display: flex;
   flex-wrap: wrap;
-  margin: 5rem 16rem 0;
+  margin: 5rem 16rem ;
   gap: 7rem;
   position: relative;
 }
@@ -210,5 +218,200 @@
     background: transparent;
     width: 5rem;
 }
+
+@media only screen and (max-width: 1500px) {
+.wrapper {
+  background-image: none;
+}
+
+.projects-wrapper {
+  margin: 5rem 10rem;
+  gap: 4rem;
+}
+
+.project-note {
+  width: 28rem;
+  height: 16rem;
+}
+
+.project-note img {
+  width: 28rem;
+  height: 16rem;
+}
+
+.project-weather {
+  width: 28rem;
+  height: 16rem;
+}
+
+.project-weather img {
+  width: 28rem;
+  height: 16rem;
+}
+
+.project-circle {
+  width: 28rem;
+  height: 16rem;
+}
+
+.project-circle img {
+  width: 28rem;
+  height: 16rem;
+}
+
+.info {
+  padding: 2rem;
+  height: 16rem;
+  font-size: 1rem;
+  gap: 2rem;
+  
+}
+
+.info h1 {
+  font-size: 2rem;
+}
+
+
+.bottom button {
+  padding: 1rem 3rem;
+  font-size: 1.1rem;
+}
+
+.projects-title {
+    display: block;
+  }
+  
+}
+
+@media only screen and (max-width: 1300px) {
+  
+  .projects-wrapper {
+  margin: 5rem 7rem;
+  gap: 5rem;
+}
+
+.project-note {
+  width: 25rem;
+  height: 15rem;
+}
+
+.project-note img {
+  width: 25rem;
+  height: 15rem;
+}
+
+.project-weather {
+  width: 25rem;
+  height: 15rem;
+}
+
+.project-weather img {
+  width: 25rem;
+  height: 15rem;
+}
+
+.project-circle {
+  width: 25rem;
+  height: 15rem;
+}
+
+.project-circle img {
+  width: 25rem;
+  height: 15rem;
+}
+
+.info {
+  padding: 1.8rem;
+  height: 15rem;
+  font-size: .9rem;
+  gap: 1.8rem;
+  
+}
+
+.info h1 {
+  font-size: 1.8rem;
+}
+
+
+.bottom button {
+  padding: 1rem 3rem;
+  font-size: 1.1rem;
+}
+}
+
+@media only screen and (max-width: 880px) {
+  .wrapper {
+    height: 90vh;
+  }
+
+  .projects-title {
+    margin: 2rem 4rem;
+  }
+  
+  
+  .projects-wrapper {
+  margin: 2rem 4rem;
+  gap: 2rem;
+}
+
+.project-note {
+  width: 18rem;
+  height: 11rem;
+}
+
+.project-note img {
+  width: 18rem;
+  height: 11rem;
+}
+
+.project-weather {
+  width: 18rem;
+  height: 11rem;
+}
+
+.project-weather img {
+  width: 18rem;
+  height: 11rem;
+}
+
+.project-circle {
+  width: 18rem;
+  height: 11rem;
+}
+
+.project-circle img {
+  width: 18rem;
+  height: 11rem;
+}
+
+.info {
+  padding: .8rem;
+  height: 11rem;
+  font-size: .8rem;
+  gap: .8rem;
+  
+}
+
+.info h1 {
+  font-size: 1.5rem;
+}
+
+
+.bottom button {
+  padding: .7rem 1.8rem;
+  font-size: 1rem;
+}
+}
+@media only screen and (max-width: 500px){
+  .projects-title {
+    margin: 2rem 4rem;
+  }
+
+
+  .projects-wrapper {
+    margin: 1rem 4rem;
+  }
+}
+
 
 </style>

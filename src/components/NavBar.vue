@@ -130,7 +130,7 @@ const close = ref(" />")
     }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
 
     .icons {
         padding-left: 1rem;
