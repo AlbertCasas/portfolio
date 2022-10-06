@@ -309,9 +309,14 @@ const sendMessage = () => {
         max-width: 25rem;
     }
 
-    .name-email .input {
-        width: 20rem;
+    .input {
+        margin: .8rem .8rem 0 .8rem;
     }
+
+    .name-email .input {
+        width: 21.5rem;
+    }
+    
 
 }
 
@@ -329,7 +334,7 @@ const sendMessage = () => {
     }
 
     .name-email .input {
-        width: 15rem;
+        width: 16.5rem;
     }
 
     .err-msg {
