@@ -85,6 +85,7 @@ const sendMessage = () => {
     display: flex;
     align-items: center;
     background-color: transparent;
+    margin-top: 4rem;
 }
 
 .contact-title {
