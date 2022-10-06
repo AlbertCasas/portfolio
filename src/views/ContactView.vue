@@ -81,7 +81,7 @@ const sendMessage = () => {
 }
 
 .form-wrapper {
-    height: 115vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     background-color: transparent;
@@ -92,6 +92,7 @@ const sendMessage = () => {
   font-weight: 900;
   font-size: 2.5rem;
   display: none;
+  margin-top: 4rem;
 }
 
 .form-message {
