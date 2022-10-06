@@ -81,7 +81,7 @@ const sendMessage = () => {
 }
 
 .form-wrapper {
-    height: 100vh;
+    height: 115vh;
     display: flex;
     align-items: center;
     background-color: transparent;
