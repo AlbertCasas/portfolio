@@ -198,7 +198,7 @@ li::before {
 
 @media only screen and (max-width: 500px) {
   .about-wrapper {
-    height: 110vh;
+    height: 120vh;
   }
 
   .text-skills {
