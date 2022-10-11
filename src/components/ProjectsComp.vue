@@ -52,7 +52,6 @@
 
 <style scoped>
 .wrapper {
-    height: 100vh;
     background-color:  #393939;
     width: 100%;
     position: relative;
@@ -88,7 +87,7 @@
 .projects-wrapper {
   display: flex;
   flex-wrap: wrap;
-  margin: 5rem 16rem ;
+  margin: 4rem 16rem ;
   gap: 7rem;
   position: relative;
 }

@@ -20,23 +20,25 @@
       </div>
     
     <div class="all-skills">
-      
-        <ul class="skills first">
-            <li>HTML</li>
-            <li>Sass</li>
-            <li>Tailwind CSS</li>
-            <li>Vue.js</li>
-            <li>SQL</li>
-            <li>Git</li>
-        </ul>
-        <ul class="skills second">
-            <li>CSS</li>
-            <li>Bootstrap</li>
-            <li>JavaScript</li>
-            <li>TypeScript</li>
-            <li>Node.js</li>
-            <li>MongoDB</li>
-        </ul>
+        <h1 class="skills-title">SKILLS</h1>
+        <div class="skills-flex">
+          <ul class="skills first">
+              <li>HTML</li>
+              <li>Sass</li>
+              <li>Tailwind CSS</li>
+              <li>Vue.js</li>
+              <li>SQL</li>
+              <li>Git</li>
+          </ul>
+          <ul class="skills second">
+              <li>CSS</li>
+              <li>Bootstrap</li>
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+              <li>Node.js</li>
+              <li>MongoDB</li>
+          </ul>
+        </div>
         
         
     </div>
@@ -102,11 +104,24 @@ const closeTag = ref("</ul>");
   font-weight: bold;
 }
 
+.skills-title {
+  color: #1dfcdb;
+  font-weight: 900;
+  font-size: 2.5rem;
+  display: none;
+}
+
 .all-skills {
     display: flex;
+    flex-direction: column;
     gap: 4rem;
     margin-right: 15rem;
     background-color: transparent;
+}
+
+.skills-flex {
+  display: flex;
+  gap: 5rem;
 }
 
 .skills {
@@ -176,6 +191,10 @@ li::before {
   .about-title {
     display: block;
   }
+
+  .skills-title {
+    display: block;
+  }
 }
 
 @media only screen and (max-width: 880px){
@@ -220,9 +239,13 @@ li::before {
     font-size: 1.2rem;
   }
 
+  .skills-title {
+    font-size: 2rem;
+  }
+
   .all-skills {
     margin: 0;
-    margin-left: 2.5rem;
+    margin-left: .5rem;
   }
 
   .all-skills li {

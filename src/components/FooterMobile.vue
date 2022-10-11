@@ -36,9 +36,6 @@ const mobile = computed(() => {
     width: 100%;
     height: 12rem;
     background-color: #303030;
-    -moz-box-shadow: 0 -5px 6px rgba(0,0,0,0.5);
-    -webkit-box-shadow: 0 -5px 6px rgba(0,0,0,0.5);
-    box-shadow: 1px -2px -1px rgba(0,0,0,0.5);
     position: relative;
     display: none;
     margin-top: 2rem;

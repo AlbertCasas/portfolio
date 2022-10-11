@@ -39,7 +39,6 @@ const close = ref(" />")
     justify-content: space-evenly;
     align-items: center;
     gap: 30rem;
-    box-shadow: 1px 2px 4px black;
 }
 
 .albert-title {

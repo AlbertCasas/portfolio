@@ -71,7 +71,7 @@ const sendMessage = () => {
 
 <style scoped>
 .wrapper {
-    
+    height: 90vh;
     background-color:  #393939;
     width: 100%;
     background-image: url("https://i.ibb.co/HztbQhy/Recurso-25.png");
@@ -81,11 +81,10 @@ const sendMessage = () => {
 }
 
 .form-wrapper {
-    height: 100vh;
     display: flex;
     align-items: center;
     background-color: transparent;
-    margin-top: 4rem;
+    margin-top: 5rem;
 }
 
 .contact-title {
@@ -93,7 +92,7 @@ const sendMessage = () => {
   font-weight: 900;
   font-size: 2.5rem;
   display: none;
-  margin-top: 4rem;
+  margin-top: 2rem;
 }
 
 .form-message {
@@ -302,6 +301,12 @@ const sendMessage = () => {
 }
 
 @media only screen and (max-width: 600px){
+
+    
+    .form-wrapper {
+        margin-top: 2rem;
+    }
+
     .form-message {
         margin-left: 3rem;
     }
@@ -326,7 +331,7 @@ const sendMessage = () => {
 
     .form-message {
         margin-left: 1.5rem;
-        margin-top: 7rem;
+        margin-top: 2rem;
         margin-bottom: 7rem;
     }
 
