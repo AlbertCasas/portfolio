@@ -77,12 +77,11 @@
 .projects {
   display: flex;
   gap: 3rem;
-  width: 1500px;
 }
 
 
 .single-project {
-  width: 528px;
+  width: 400px;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -91,7 +90,7 @@
 }
 
 .single-project img {
-  width: 528px;;
+  width: 400px;;
   border-radius: 20px 20px 0 0;
 }
 
@@ -132,11 +131,11 @@
 
 @media only screen and (max-width: 1300px) {
   .single-project {
-    width: 400px;
+    width: 350px;
   }
 
   .single-project img {
-    width: 400px;
+    width: 350px;
   }
 }
 
@@ -159,6 +158,16 @@
 
   .single-project p, span {
     font-size: 1.1rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .single-project {
+    width: 250px;
+  }
+
+  .single-project img {
+    width: 250px;
   }
 }
 
