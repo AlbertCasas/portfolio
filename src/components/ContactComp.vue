@@ -81,7 +81,7 @@ const sendMessage = () => {
 
 .form-wrapper {
     display: flex;
-    background-color: transparent;
+    background-color: #1c1c1c;
 }
 
 .big {
@@ -307,9 +307,6 @@ const sendMessage = () => {
 @media only screen and (max-width: 600px){
 
     
-    .form-wrapper {
-        margin-top: 2rem;
-    }
 
     .message {
         max-width: 25rem;
