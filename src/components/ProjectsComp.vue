@@ -88,7 +88,6 @@
   gap: 1rem;
   background-color: #000000;
   border-radius: 20px 20px 0 0;
-  margin-bottom: 4rem;
 }
 
 .single-project img {
