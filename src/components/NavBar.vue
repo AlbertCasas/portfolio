@@ -3,18 +3,16 @@
     <div class="albert-title">
         <RouterLink class="title" to="/"><span class="open-close">{{open}}</span><span class="albert">Albert Casas</span><span class="open-close">{{close}}</span></RouterLink>
     </div>
-    <div class="links">
-        <div class="router">
-            <RouterLink class="nav-button" to="/about">About</RouterLink>
-            <RouterLink class="nav-button" to="/projects">Projects</RouterLink>
-            <RouterLink class="nav-button" to="/contact">Contact</RouterLink>
-        </div>
-        <div class="icons">
-            <a class="icon" href="https://www.linkedin.com/in/albertcasas3d/" target="_blank"><img src="https://i.ibb.co/74TGDbM/linkdn.png" alt="linkdn" border="0"></a>
-            <a class="icon" href="https://github.com/AlbertCasas" target="_blank"><img src="https://i.ibb.co/xXTj41w/Recurso-8.png" alt="Recurso-8" border="0"></a>
-        </div>
-    </div> 
+    
+    <router-link class="nav-button" to="/about">About</router-link>
+    <router-link class="nav-button" to="/projects">Projects</router-link>
+    <router-link class="nav-button" to="/contact">Contact</router-link>
+    
+    <div class="icons">
+        <a class="icon" href="https://www.linkedin.com/in/albertcasas3d/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a class="icon" href="https://github.com/AlbertCasas" target="_blank"><i class="fa-brands fa-github"></i></a>
     <HamburgerMenu />
+    </div>
 </nav>
 </template>
 
@@ -32,17 +30,20 @@ const close = ref(" />")
 <style scoped>
 
 .navbar {
-    background-color: #303030;
+    background-color: #000000;
     height: 5rem;
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    gap: 30rem;
 }
 
 .albert-title {
-    background-color: #303030;
+    background-color: #000000;
+    margin-left: 5%;
+    display: flex;
+    justify-content: flex-start;
+    
 }
 
 .title {
@@ -50,37 +51,25 @@ const close = ref(" />")
     text-decoration: none;
     font-size: 2rem;
     font-weight: bold;
-    background-color: #303030;
+    background-color: #000000;
 }
 
 .albert {
-    background-color: #303030;
+    background-color: #000000;
 }
 
 .open-close {
     color: white;
-    background-color: #303030;
-}
-
-.links {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 3rem;
-    font-size: 1.2rem;
-    background-color: #303030;
-}
-
-.router {
-    display: flex;
-    gap: 3rem;
-    background-color: #303030;
+    background-color: #000000;
 }
 
 .nav-button {
     color: white;
     text-decoration: none;
-    background-color: #303030;
+    background-color: #000000;
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
 }
 
 .nav-button:hover {
@@ -90,53 +79,58 @@ const close = ref(" />")
 .icons {
     display: flex;
     gap: 1.5rem;
-    background-color: #303030;
+    background-color: #000000;
+    margin-right: 5%;
+    justify-content: flex-end;
 }
 
 .icon {
-    background-color: #303030;
+    background-color: #000000;
 }
 
-.icon img {
-    background-color: #303030;
+.icon i {
+    background-color: #000000;
+    color: white;
+    font-size: 2rem;
+}
+
+.icon i:hover {
+    color: #1DFCDB;
 }
 
 .router-link-active {
     color: #1DFCDB;
 }
 
-@media only screen and (max-width: 1500px) {
-    .navbar {
-        gap: 0;
-    }
-}
-@media only screen and (max-width: 880px) {
-
+@media only screen and (max-width: 1300px) {
     .title {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
+
+}
+@media only screen and (max-width: 980px) {
+
+
+    .nav-button {
+        font-size: 1rem;
+    }
+
 
     .icon img {
         width: 1.7rem;
     }
 
-    .router {
-        gap: 1.5rem;
-    }
-
-    .links {
-        gap: 2rem;
-    }
+    
 }
 
 @media only screen and (max-width: 600px) {
 
     .icons {
-        padding-left: 1rem;
+        align-items: center;
 
     }
 
-    .router {
+    .nav-button {
         display: none;
     }
 }

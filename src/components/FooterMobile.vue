@@ -1,120 +1,135 @@
 <template>
 <div class="footer">
-    <div class="first-row">
-        <div class="footer-text">
-            <p>If you are interested in<br> working with me</p>
-        </div>
-        <div class="router-links">
-            <RouterLink class="nav-button" to="/about">About</RouterLink>
-            <RouterLink class="nav-button" to="/projects">Projects</RouterLink>
-        </div>
+    <div class="albert-title">
+        <RouterLink class="title" to="/"><span class="open-close">{{open}}</span><span class="albert">Albert Casas</span><span class="open-close">{{close}}</span></RouterLink>
     </div>
-    <div class="second-row">
-        <div class="footer-button">
-            <RouterLink class="contact-me" to="/contact">CONTACT ME</RouterLink>
-        </div>
-        <div class="social">
-            <a href="https://www.linkedin.com/in/albertcasas3d/" target="_blank"><img src="https://i.ibb.co/4RnJ29W/Recurso-2.png" alt="Recurso-2" border="0"></a>
-            <a href="https://github.com/AlbertCasas" target="_blank"><img src="https://i.ibb.co/NSWFjF3/Recurso-1-2.png" alt="Recurso-1-2" border="0"></a>
-        </div>
+    <router-link class="nav-button" to="/about">About</router-link>
+    <router-link class="nav-button" to="/projects">Projects</router-link>
+    <router-link class="nav-button" to="/contact">Contact</router-link>
+    <div class="icons">
+        <a class="icon" href="https://www.linkedin.com/in/albertcasas3d/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a class="icon" href="https://github.com/AlbertCasas" target="_blank"><i class="fa-brands fa-github"></i></a>
     </div>
-
-  </div>
+</div>
 </template>
 
 <script setup>
-import {computed} from 'vue'
+import {computed, ref} from 'vue'
 
 const mobile = computed(() => {
     return this.$vuetify.breakpoint.sm
 })
 
+const open = ref("<")
+const close = ref(" />")
+
 </script>
 
 <style scoped>
 .footer {
+    background-color: #1DFCDB;
+    height: 5rem;
     width: 100%;
-    height: 12rem;
-    background-color: #303030;
-    position: relative;
-    display: none;
-    margin-top: 2rem;
-}
-
-.first-row {
-    display: flex;
-    background-color: #303030;
-    margin: 1.5rem 2rem;
-    justify-content: space-between;
-}
-
-.footer-text {
-    width: 13rem;
-    background-color: #303030;
-    color: white;
-    font-size: 1.2rem;   
-}
-
-.footer-text p {
-    background-color: #303030;
-}
-
-.router-links {
-    background-color: #303030;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
-.nav-button {
-    text-decoration: none;
-    color: white;
-    background-color: #303030;
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-}
-
-.second-row {
     display: flex;
     justify-content: space-between;
-    background-color: #303030;
-    margin: 0 2rem;
     align-items: center;
 }
 
-.button {
-    background-color: #303030;
-    
-}
-
-.contact-me {
+.albert-title {
     background-color: #1DFCDB;
-    text-decoration: none;
-    padding: 1rem 3rem;
-    border-radius: 7px;
-    color: #393939;
-    font-weight: 900;
-}
-
-.social {
-    background-color: #303030;
+    margin-left: 5%;
     display: flex;
-    gap: 1rem;
+    justify-content: flex-start;
 }
 
-a {
-    background-color: #303030;
+.title {
+    color: red;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: #1DFCDB;
 }
 
-img {
-    width: 2rem;
-    background-color: #303030;
+.albert {
+    color: #000000;
+    background-color: #1DFCDB;
 }
 
-@media only screen and (max-width: 500px) {
+.open-close {
+    color: #000000;
+    background-color: #1DFCDB;
+}
+
+
+.nav-button {
+    color: #000000;
+    text-decoration: none;
+    background-color: #1DFCDB;
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.nav-button:hover {
+    color: white;
+}
+
+.icons {
+    display: flex;
+    gap: 1.5rem;
+    background-color: #1DFCDB;
+    margin-right: 5%;
+    justify-content: flex-end;
+}
+
+.icon {
+    background-color: #1DFCDB;
+}
+
+.icon i {
+    background-color: #1DFCDB;
+    color: black;
+    font-size: 2rem;
+}
+
+.icon i:hover {
+    color: white;
+}
+
+.router-link-active {
+    color: white;
+}
+
+@media only screen and (max-width: 1300px) {
+    .title {
+        font-size: 1.4rem;
+    }
+
+}
+@media only screen and (max-width: 980px) {
+
+
+    .nav-button {
+        font-size: 1rem;
+    }
+
+
+    .icon img {
+        width: 1.7rem;
+    }
+
     
-    .footer {
-    display: block;
-    } 
+}
+
+@media only screen and (max-width: 600px) {
+
+    .icons {
+        align-items: center;
+
+    }
+
+    .nav-button {
+        display: none;
+    }
 }
 </style>

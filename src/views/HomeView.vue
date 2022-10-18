@@ -1,19 +1,23 @@
 <template>
-<div class="home-wrapper">
+<div class="web-wrapper">
   <NavBar />
-  <div class="text">
-    <span class="tags open-tag">{{openTag}}</span>
-    <h1>Hello! <br>
-    I'm <span class="big">ALBERT</span>, <br>
-    Front End Developer.</h1>
-    <br>
-    <h1>Welcome to my <span class="big">SITE</span>.</h1>
-    <span class="tags close-tag">{{closeTag}}</span>
-  </div>
-  <div class="button">
-    <RouterLink class="contact-me" to="/contact">CONTACT ME</RouterLink>
-  </div>
-  <FooterMobile class="footer" />
+  <section id="home">
+    <div class="text">
+      <h1>Hello! <br>
+      I'm <span class="big">ALBERT</span>, <br>
+      Front End Developer.</h1>
+      <br><br><br>
+      <h2>How can I help you?</h2>
+      <div class="button">
+        <a class="contact-me" href="#contact">CONTACT ME</a>
+        <a class="portfolio-button" href="#projects">VIEW PORTFOLIO</a>
+      </div>
+    </div>
+  </section>
+  <AboutComp />
+  <ProjectsComp />
+  <ContactComp />
+  <FooterMobile />
 </div>
 </template>
 
@@ -21,37 +25,58 @@
 import NavBar from '../components/NavBar.vue'
 import FooterMobile from '../components/FooterMobile.vue'
 import AboutComp from '../components/AboutComp.vue'
-import {ref} from 'vue'
+import ProjectsComp from '../components/ProjectsComp.vue'
+import ContactComp from '../components/ContactComp.vue'
 
 
-const openTag = ref("<h1>")
-const closeTag = ref("</h1>")
 
 </script>
 
 <style scoped>
-  .home-wrapper {
-    min-height: 100vh;
-    background-color:  #393939;
+  * {
+    background-color: #1c1c1c;
+  }
+
+  #home {
+    background-color:  #1c1c1c;
+    background-image: url("https://i.ibb.co/vPdXg45/pexels-thisisengineering-3861976.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     width: 100%;
-    position: relative;
+    display: flex;
+    align-items: center;
+    height: 95vh;
+    margin-bottom: 1rem;
+  }
+
+  .text {
+    background-color: transparent;
     display: flex;
     flex-direction: column;
-    background-image: url("https://i.ibb.co/DrL0JP4/Recurso-10.png");
-    background-position: bottom 0 right 0;
-    background-size: 19rem;
-    background-repeat: no-repeat;
+    margin-left: 5%;
+    width: 90%;
   }
 
 
-  .text {
-    margin-top: 10rem;
-    margin-left: 16rem;
-    font-size: 2.5rem;
+  h1 {
+    font-size: 5rem;
     color: white;
     cursor: default;
     max-width: 55rem;
+    background: transparent;
+  
   }
+
+  h2 {
+    font-size: 3.5rem;
+    color: white;
+    cursor: default;
+    max-width: 55rem;
+    background: transparent;
+    margin-bottom: 1rem;
+  }
+
 
   .tags {
     font-size: 1.2rem;
@@ -64,84 +89,77 @@ const closeTag = ref("</h1>")
     color: #1DFCDB;
     font-weight: 900;
     text-transform: uppercase;
-
+    background-color: transparent;
   }
 
 
 .button {
-  margin-left: 6rem;
-  margin-top: 4rem;
-  display: none;
-  
+  margin-top: 2rem;
+  background-color: transparent;
+  font-size: 1.5rem;
 }
 
 .contact-me {
   background-color: #1DFCDB;
   text-decoration: none;
+  text-align: center;
   padding: 1rem 3rem;
   border-radius: 7px;
-  color: #393939;
+  color: #000000;
   font-weight: 900;
+  margin-right: 4rem;
+  max-width: 30%;
 }
 
-
-@media only screen and (max-width: 1500px) {
-
-  .home-wrapper {
-    background-size: 14rem;
-  }
-
-  .text {
-    margin-top: 8rem;
-    margin-left: 13rem;
-    font-size: 2rem;
-    max-width: 43rem;
-  }
+.portfolio-button {
+  background-color: #000000;
+  text-decoration: none;
+  text-align: center;
+  padding: .9rem 2.9rem;
+  border-radius: 7px;
+  color: white;
+  font-weight: 900;
+  margin-right: 4rem;
+  border: .1rem solid white;
+  max-width: 30%;
 }
 
-@media only screen and (max-width: 1250px) {
-
-  .home-wrapper {
-    background-image: none;
-  }
-}
-
-@media only screen and (max-width: 1000px) {
-  .text {
-    margin-left: 8rem;
-  }
-}
 
 @media only screen and (max-width: 880px) {
-  .text {
-    font-size: 1.5rem;
-    margin-left: 6rem;
-    margin-top: 7rem;
+  .button {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .contact-me, .portfolio-button {
+    max-width: 50%;
+  }
+
+  
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
   }
 
   .button {
-    display: block;
+    font-size: 1.1rem;
   }
 }
-
-@media only screen and (max-width: 500px) {
-  .text {
-    margin-top: 3rem;
-    margin-left: 2rem;
-    font-size: 1.3rem;
-  }
-
-  .button {
-    display: none;
-  }
-
-  .footer {
-  display: block;
-  position: absolute;
-  bottom: 0;
-  } 
-}
-
-
 
 </style>

@@ -1,8 +1,7 @@
 <template>
-<div class="about-wrapper">
-    <div class="text-skills">
-      <div class="text-button">
-        <h1 class="about-title">ABOUT</h1>
+<section id="about">
+    <div class="text">
+        <h1 class="about-title">GET TO <span>KNOW ME</span></h1>
         <p class="about-text">
             I’m a <span class="about-big">FRONT-END DEVELOPER</span> based in Barcelona.
             <br />
@@ -16,9 +15,8 @@
             Interested in keep learning everyday and working on 
             ambitious projects to keep growing as a developer.
         </p>
-        <RouterLink to="/contact" class="btn">CONTACT ME</RouterLink>
-      </div>
-    
+        <a class="contact-me" href="#contact">CONTACT ME</a>
+    </div>
     <div class="all-skills">
         <h1 class="skills-title">SKILLS</h1>
         <div class="skills-flex">
@@ -39,11 +37,8 @@
               <li>MongoDB</li>
           </ul>
         </div>
-        
-        
     </div>
-    </div>
-</div>
+</section>
 </template>
 
 <script setup>
@@ -57,31 +52,49 @@ const closeTag = ref("</ul>");
 </script>
 
 <style scoped>
-.about-wrapper {
-  background-color: #393939;
-  width: 100%;
-  height: 85vh;
-  background-image: url("https://i.ibb.co/DMMdrBj/Recurso-27.png");
-  background-position: bottom 0 right 0;
-  background-size: 19rem;
-  background-repeat: no-repeat;
+* {
+  background-color: #1c1c1c;
 }
 
+#about {
+  background-color: #1c1c1c;
+  width: 100%;
+  min-height: 85vh;
+  display: flex;
+  gap: 12%;
+  align-items: flex-start;
+}
 
-.text-skills {
-    padding-top: 11rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin-bottom: 3rem;
-    background-color: transparent;
+.text {
+  margin-left: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-top: 7rem;
 }
 
 .about-title {
-  color: #1dfcdb;
+  color: white;
   font-weight: 900;
   font-size: 2.5rem;
-  display: none;
+  cursor: default;
+}
+
+.contact-me {
+  background-color: #1DFCDB;
+  text-decoration: none;
+  text-align: center;
+  padding: 1rem 3rem;
+  border-radius: 7px;
+  color: #000000;
+  font-weight: 900;
+  margin-right: 4rem;
+  max-width: 30%;
+  font-size: 1.5rem;
+}
+
+span {
+  color: #1dfcdb;
 }
 
 .text-button {
@@ -95,8 +108,7 @@ const closeTag = ref("</ul>");
   color: white;
   font-size: 1.5rem;
   cursor: default;
-  
-  width: 39rem;
+  max-width: 39rem;
 }
 
 .about-big {
@@ -108,20 +120,20 @@ const closeTag = ref("</ul>");
   color: #1dfcdb;
   font-weight: 900;
   font-size: 2.5rem;
-  display: none;
+  cursor: default;
 }
 
 .all-skills {
+    margin-top: 7rem;
     display: flex;
     flex-direction: column;
-    gap: 4rem;
-    margin-right: 15rem;
+    gap: 3rem;
     background-color: transparent;
 }
 
 .skills-flex {
   display: flex;
-  gap: 5rem;
+  gap: 8rem;
 }
 
 .skills {
@@ -133,6 +145,7 @@ const closeTag = ref("</ul>");
 
 .skills li {
   background-color: transparent;
+  
 }
 
 .skills:hover {
@@ -141,6 +154,7 @@ const closeTag = ref("</ul>");
 
 li {
   margin-bottom: 2rem;
+  
 }
 
 li::before {
@@ -149,112 +163,54 @@ li::before {
   font-weight: bold; /* If you want it to be bold */
   display: inline-block; /* Needed to add space between the bullet and the text */
   width: 1em; /* Also needed for space (tweak if needed) */
-  margin-left: -1em;
+  
 }
 
-.about-tags {
-  font-size: 1.2rem;
-  color: #747474;
-  cursor: default;
-  background-color: transparent;
-}
-
-.btn {
-  text-decoration: none;
-  font-size: 1.5rem;
-  color: #393939;
-  font-weight: 900;
-  background-color: #1dfcdb;
-  padding: 1rem 8rem;
-  border-radius: 7px;
-  max-width: 10rem;
-}
-
-@media only screen and (max-width: 1500px) {
-  .about-wrapper {
-    background-image: none;
-  }
-
-  .text-skills {
+@media only screen and (max-width: 1300px) {
+  #about {
     flex-direction: column;
-    justify-content: center;
-    align-content: space-between;
-    gap: 5rem;
-    padding-top: 7rem;
-    margin-right: 14rem;
   }
 
-  .text-button {
-    margin-left: 0;
+  .text {
+    margin-right: 5%;
   }
 
-  .about-title {
-    display: block;
-  }
-
-  .skills-title {
-    display: block;
-  }
-}
-
-@media only screen and (max-width: 880px){
-
-  .text-skills {
-    padding-top: 4rem;
-    margin-right: 0;
-    align-items: flex-start;
-    margin-left: 4rem;
-  }
-  
-  .about-text {
-    width: 25rem;
+  .skills {
+    font-size: 1.3rem;
   }
 
   .all-skills {
-    margin-left: 2rem;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 7rem;
+  }
+
+
+}
+
+@media only screen and (max-width: 600px) {
+  .about-text {
+    font-size: 1.3rem;
+  }
+
+  .contact-me {
+    font-size: 1.3rem;
+  }
+  
+  .skills-flex {
+    gap: 3rem;
   }
 }
 
-@media only screen and (max-width: 500px) {
-  .about-wrapper {
-    height: 125vh;
+@media only screen and (max-width: 400px) {
+  .skills-flex {
+    gap: 2.2rem;
   }
+}
 
-  .text-skills {
-    padding-top: 2rem;
-    margin-left: 2rem;
-  }
-
-  .text-button {
-    gap: 1rem;
-  }
-
-  .about-title {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  
-  .about-text {
-    width: 20rem;
+@media only screen and (max-width: 340px) {
+  .skills {
     font-size: 1.2rem;
-  }
-
-  .skills-title {
-    font-size: 2rem;
-  }
-
-  .all-skills {
-    margin: 0;
-    margin-left: .5rem;
-  }
-
-  .all-skills li {
-    font-size: 1.2rem;
-    align-self: center;
-  }
-
-  .btn {
-    display: none;
   }
 }
 </style>

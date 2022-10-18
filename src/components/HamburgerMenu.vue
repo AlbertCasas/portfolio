@@ -32,7 +32,7 @@ const toggleBurger = () => {
 
 <style scoped>
 .hamburger {
-    background-color: #303030;;
+    background-color: #000000;
     cursor: pointer;
     display: none;
     position: relative;
@@ -50,13 +50,13 @@ const toggleBurger = () => {
 
 .menu {
     display: none;
-    background-color: #303030;
+    background-color: #000000;
     width: 10rem;
     height: 9rem;
     flex-direction: column;
     gap: 1rem;
     position: absolute;
-    top: 5rem;
+    top: 4.9rem;
     right: 0;
     z-index: 99;
     box-shadow: 1px 2px 4px black;
@@ -66,7 +66,7 @@ const toggleBurger = () => {
 }
 
 .burger-button {
-    background-color: #303030;
+    background-color: #000000;
     text-decoration: none;
     color: white;
     font-size: 1.2rem;
@@ -84,7 +84,7 @@ const toggleBurger = () => {
     }
 
     .hamburger.active {
-        background-color: #303030;
+        background-color: #000000;
     }
 
     .menu.active {

@@ -1,48 +1,32 @@
 <template>
-<div class="wrapper">
-    <h1 class="projects-title">PROJECTS</h1>
-  <div class="projects-wrapper">
-    <div class="project-note">
-      <img src="https://i.ibb.co/rGg6mNb/Recurso-22.png" alt="Recurso-22" border="0">
-      <div class="overlay">
-        <div class="info">
-          <h1>Note It!</h1>
-          <p>A To Do App where you can register and login to your account and create your tasks, mark them as completed, edit your taks and delete them.</p>
-          <div class="bottom">
-            <span>Vue.js  -  Supabase</span>
-            <a href="https://note-it-project.vercel.app/auth/login" target="_blank"><button>VISIT</button></a>
-          </div>
-        </div>
+<section id="projects">
+  <h1 class="project-title">MY <span class="big">PROJECTS</span></h1>
+  <div class="wrapper">
+    <div class="projects">
+      <div class="single-project">
+        <img src="https://i.ibb.co/SmPJhVK/note-it-card.png" alt="note it">
+        <h2>NOTE IT!</h2>
+        <p>Task management App with authentication to register and login ti your account where you can create your tasks and mark them as completed, edit and delete them.</p>
+        <span>Vue.js - Supabase</span>
+        <a href="https://note-it-project.vercel.app/auth/login" target="_blank">VISIT</a>
       </div>
-    </div>
-    <div class="project-weather">
-      <img src="https://i.ibb.co/CVxDXFP/Recurso-23-1.png" alt="Recurso-23-1" border="0">
-      <div class="overlay">
-        <div class="info">
-          <h1>WeatherApp</h1>
-          <p>A Weather App where you can add cities around the world to check detailed weather forecast of every city you want.</p>
-          <div class="bottom">
-            <span>Vue.js  -  Firebase</span>
-            <a href="https://weather-app-zeta-sooty.vercel.app/" target="_blank"><button>VISIT</button></a>
-          </div>
-        </div>
+      <div class="single-project">
+        <img src="https://i.ibb.co/cCn1TBF/Recurso-28.png" alt="weather app">
+        <h2>WEATHER APP</h2>
+        <p>An App that allows you to add different locations and gives you in real time information about the weather in any city that you added, imported from OpenWeatherMap.org API.</p>
+        <span>Vue.js - Firebase</span>
+        <a href="https://weather-app-zeta-sooty.vercel.app/" target="_blank">VISIT</a>
       </div>
-    </div>
-    <div class="project-circle">
-      <img src="https://i.ibb.co/vxTb8C2/Recurso-24.png" alt="Recurso-24" border="0">
-      <div class="overlay">
-        <div class="info">
-          <h1>Circle Clone</h1>
-          <p>This is a clone of Circle agency webpage responsive for mobiles and desktop. The projects section information comes from a fake API.</p>
-          <div class="bottom">
-            <span>HTML - CSS - JavaScript</span>
-            <a href="https://circle-cloning.vercel.app/" target="_blank"><button>VISIT</button></a>
-          </div>
-        </div>
+      <div class="single-project">
+        <img src="https://i.ibb.co/ChVjQ5g/citcle-card.png" alt="note it">
+        <h2>CIRCLE CLONE</h2>
+        <p>Cloning of a website and making it responsive for mobiles and desktop. Also I imported the projects section information from a fake API and simulated the contact form.</p>
+        <span>HTML - CSS - JavaScript</span>
+        <a href="https://circle-cloning.vercel.app/" target="_blank">VISIT</a>
       </div>
     </div>
   </div>
-</div>
+</section>
 </template>
 
 <script setup>
@@ -51,366 +35,133 @@
 </script>
 
 <style scoped>
-.wrapper {
-    background-color:  #393939;
-    width: 100%;
-    position: relative;
-    overflow: auto;
-    background-image: url("https://i.ibb.co/yyL8CFD/Recurso-26.png");
-    background-position: bottom 0 right 0;
-    background-size: 19rem;
-    background-repeat: no-repeat;
-  }
-
-  .wrapper::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
+* {
+  background-color: #1c1c1c;
 }
 
-.projects-title {
-  color: #1dfcdb;
+#projects {
+  min-height: 80vh;
+  background-color: #1c1c1c;
+  width: 100%;
+}
+
+.wrapper {
+  margin: 3rem 5%;
+}
+
+.project-title {
+  color: white;
   font-weight: 900;
   font-size: 2.5rem;
+  cursor: default;
+  margin: 7rem 0 3rem 5%;
+}
+
+.big {
+  color: #1DFCDB;
+  font-weight: 900;
+  font-size: 2.5rem;
+  cursor: default;
+  margin-bottom: 3rem;
+  background-color: #1c1c1c;
+}
+
+.wrapper {
+  max-width: 100vw;
+  overflow: scroll;
+}
+
+.wrapper::-webkit-scrollbar {
   display: none;
-  margin: 2rem 10rem;
 }
 
-.projects-wrapper::-webkit-scrollbar {
-  display: none;
-}
-
-.projects-wrapper {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
-
-.projects-wrapper {
+.projects {
   display: flex;
-  flex-wrap: wrap;
-  margin: 4rem 16rem ;
-  gap: 7rem;
-  position: relative;
+  gap: 3rem;
+  width: 1500px;
 }
 
-.project-note {
-  width: 35rem;
-  height: 20rem;
-  border-radius: 7px; 
-  position: relative;
+
+.single-project {
+  width: 528px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #000000;
+  border-radius: 20px 20px 0 0;
+  margin-bottom: 4rem;
 }
 
-.project-note img {
-  border-radius: 7px;
-  width: 35rem;
-  height: 20rem;
+.single-project img {
+  width: 528px;;
+  border-radius: 20px 20px 0 0;
 }
 
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 7px;
-}
-
-.project-note:hover .overlay {
-  opacity: 0.9;
+.single-project  p, span, a {
+  background-color: #000000;
+  color: white;
   cursor: default;
 }
 
-.info {
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 7px;
-  padding: 3rem;
-  height: 20rem;
-  color: white;
-  font-size: 1.2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-  
-}
-
-.info h1 {
+.single-project h2 {
+  font-size: 2rem;
+  margin-left: 1rem;
+  background-color: #000000;
   color: #1DFCDB;
-  font-size: 2.5rem;
-  font-weight: 900;
-  background-color: transparent;
+  cursor: default;
 }
 
-.bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.bottom button {
-  padding: 1rem 4rem;
-  text-align: center;
-  background-color: #1DFCDB;
-  border: none;
-  border-radius: 7px;
-  color: #393939;
+.single-project p, span {
   font-size: 1.2rem;
-  font-weight: 900;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
-.bottom button:hover {
+.single-project a {
+  align-self: flex-end;
+  justify-self: flex-end;
+  margin-right: 1rem;
+  text-decoration: none;
+  color: black;
+  background: #1DFCDB;
+  font-size: 1.5rem;
+  font-weight: 900;
+  padding: 1rem 3.5rem;
+  border-radius: 7px;
+  margin-bottom: 1rem;
   cursor: pointer;
 }
 
-.project-weather {
-  width: 35rem;
-  height: 20rem;
-  border-radius: 7px; 
-  position: relative;
-}
-
-.project-weather img {
-  border-radius: 7px;
-  width: 35rem;
-  height: 20rem;
-}
-
-.project-weather:hover .overlay {
-  opacity: 0.9;
-  cursor: default;
-}
-
-.project-circle {
-  width: 35rem;
-  height: 20rem;
-  border-radius: 7px;
-  position: relative;
-}
-
-.project-circle img {
-  border-radius: 7px;
-  width: 35rem;
-  height: 20rem;
-}
-
-.project-circle:hover .overlay {
-  opacity: 0.9;
-  cursor: default;
-}
-
-.decoration {
-    max-width: 19rem;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-}
-
-.title-section {
-    position: fixed;
-    right: 0;
-    top: 15rem;
-    background: transparent;
-    width: 5rem;
-}
-
-@media only screen and (max-width: 1500px) {
-.wrapper {
-  background-image: none;
-}
-
-.projects-wrapper {
-  margin: 5rem 10rem;
-  gap: 4rem;
-}
-
-.project-note {
-  width: 28rem;
-  height: 16rem;
-}
-
-.project-note img {
-  width: 28rem;
-  height: 16rem;
-}
-
-.project-weather {
-  width: 28rem;
-  height: 16rem;
-}
-
-.project-weather img {
-  width: 28rem;
-  height: 16rem;
-}
-
-.project-circle {
-  width: 28rem;
-  height: 16rem;
-}
-
-.project-circle img {
-  width: 28rem;
-  height: 16rem;
-}
-
-.info {
-  padding: 2rem;
-  height: 16rem;
-  font-size: 1rem;
-  gap: 2rem;
-  
-}
-
-.info h1 {
-  font-size: 2rem;
-}
-
-
-.bottom button {
-  padding: 1rem 3rem;
-  font-size: 1.1rem;
-}
-
-.projects-title {
-    display: block;
-  }
-  
-}
-
 @media only screen and (max-width: 1300px) {
-  
-  .projects-wrapper {
-  margin: 5rem 7rem;
-  gap: 5rem;
-}
-
-.project-note {
-  width: 25rem;
-  height: 15rem;
-}
-
-.project-note img {
-  width: 25rem;
-  height: 15rem;
-}
-
-.project-weather {
-  width: 25rem;
-  height: 15rem;
-}
-
-.project-weather img {
-  width: 25rem;
-  height: 15rem;
-}
-
-.project-circle {
-  width: 25rem;
-  height: 15rem;
-}
-
-.project-circle img {
-  width: 25rem;
-  height: 15rem;
-}
-
-.info {
-  padding: 1.8rem;
-  height: 15rem;
-  font-size: .9rem;
-  gap: 1.8rem;
-  
-}
-
-.info h1 {
-  font-size: 1.8rem;
-}
-
-
-.bottom button {
-  padding: 1rem 3rem;
-  font-size: 1.1rem;
-}
-}
-
-@media only screen and (max-width: 880px) {
-  .wrapper {
-    height: 90vh;
+  .single-project {
+    width: 400px;
   }
 
-  .projects-title {
-    margin: 2rem 4rem;
-  }
-  
-  
-  .projects-wrapper {
-  margin: 2rem 4rem;
-  gap: 2rem;
-}
-
-.project-note {
-  width: 18rem;
-  height: 11rem;
-}
-
-.project-note img {
-  width: 18rem;
-  height: 11rem;
-}
-
-.project-weather {
-  width: 18rem;
-  height: 11rem;
-}
-
-.project-weather img {
-  width: 18rem;
-  height: 11rem;
-}
-
-.project-circle {
-  width: 18rem;
-  height: 11rem;
-}
-
-.project-circle img {
-  width: 18rem;
-  height: 11rem;
-}
-
-.info {
-  padding: .8rem;
-  height: 11rem;
-  font-size: .8rem;
-  gap: .8rem;
-  
-}
-
-.info h1 {
-  font-size: 1.5rem;
-}
-
-
-.bottom button {
-  padding: .7rem 1.8rem;
-  font-size: 1rem;
-}
-}
-@media only screen and (max-width: 500px){
-  .projects-title {
-    margin: 2rem 4rem;
-  }
-
-
-  .projects-wrapper {
-    margin: 1rem 4rem;
+  .single-project img {
+    width: 400px;
   }
 }
 
+@media only screen and (max-width: 880px){
+  .projects {
+    gap: 1.5rem;
+  }
+
+  .single-project {
+    width: 300px;
+  }
+
+  .single-project img {
+    width: 300px;
+  }
+
+  .single-project h2 {
+    font-size: 1.5rem;
+  }
+
+  .single-project p, span {
+    font-size: 1.1rem;
+  }
+}
 
 </style>
