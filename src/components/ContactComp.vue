@@ -76,6 +76,7 @@ const sendMessage = () => {
     height: 90vh;
     background-color:  #1c1c1c;
     width: 100%;
+    
 }
 
 .form-wrapper {
@@ -344,6 +345,10 @@ const sendMessage = () => {
 }
 
 @media only screen and (max-width: 450px) {
+
+    #contact {
+        margin-bottom: 10rem;
+    }
 
     .form-message {
         margin-left: 1.5rem;
