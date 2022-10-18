@@ -26,6 +26,7 @@ const close = ref(" />")
 </script>
 
 <style scoped>
+
 .footer {
     background-color: #1DFCDB;
     height: 5rem;
@@ -33,6 +34,8 @@ const close = ref(" />")
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 5rem;
+
 }
 
 .albert-title {
@@ -103,6 +106,10 @@ const close = ref(" />")
 @media only screen and (max-width: 1300px) {
     .title {
         font-size: 1.4rem;
+    }
+
+    .footer {
+        margin-top: 15rem;
     }
 
 }

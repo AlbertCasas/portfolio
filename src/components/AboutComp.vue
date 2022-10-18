@@ -59,10 +59,10 @@ const closeTag = ref("</ul>");
 #about {
   background-color: #1c1c1c;
   width: 100%;
-  min-height: 85vh;
   display: flex;
   gap: 12%;
   align-items: flex-start;
+  margin-bottom: 7rem;
 }
 
 .text {

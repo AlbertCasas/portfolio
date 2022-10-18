@@ -40,7 +40,6 @@
 }
 
 #projects {
-  min-height: 80vh;
   background-color: #1c1c1c;
   width: 100%;
 }

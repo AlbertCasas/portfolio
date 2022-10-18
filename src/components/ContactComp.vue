@@ -73,10 +73,9 @@ const sendMessage = () => {
 }
 
 #contact {
-    height: 90vh;
     background-color:  #1c1c1c;
     width: 100%;
-    
+    margin-bottom: 2rem;
 }
 
 .form-wrapper {
@@ -92,7 +91,7 @@ const sendMessage = () => {
   color: white;
   font-weight: 900;
   font-size: 2.5rem;
-  margin-top: 5rem;
+  margin-top: 7rem;
   margin-bottom: 3rem;
 }
 
@@ -370,6 +369,17 @@ const sendMessage = () => {
     .err-msg {
         font-size: 1rem;
         margin-left: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 354px){
+    .contact-form {
+        min-width: 17rem;
+        max-width: 17rem;
+    }
+
+    .name-email .input {
+        width: 13.5rem;
     }
 }
 </style>
