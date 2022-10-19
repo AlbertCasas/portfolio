@@ -34,7 +34,7 @@ const close = ref(" />")
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 4rem;
+    margin-top: 7rem;
 
 }
 

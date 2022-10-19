@@ -59,9 +59,9 @@ const closeTag = ref("</ul>");
 #about {
   background-color: #1c1c1c;
   width: 100%;
-  min-height: 80vh;
   display: flex;
   gap: 12%;
+  margin-bottom: 7rem;
 }
 
 .text {
@@ -167,7 +167,7 @@ li::before {
 @media only screen and (max-width: 1300px) {
   #about {
     flex-direction: column;
-    gap: 7rem;
+    gap: 11rem;
     margin-bottom: 0;
   }
 
@@ -220,6 +220,10 @@ li::before {
   }
 
   .big {
+    font-size: 2.2rem;
+  }
+
+  .skills-title {
     font-size: 2.2rem;
   }
 }

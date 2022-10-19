@@ -43,7 +43,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 12rem;
+  margin-bottom: 7rem;
 }
 
 
@@ -65,7 +65,7 @@
 }
 
 .projects {
-  margin: 3rem 0;
+  margin: 3rem 0 0 0;
   max-width: 100vw;
   overflow-x: scroll;
   display: flex;

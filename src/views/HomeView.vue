@@ -45,7 +45,7 @@ import ContactComp from '../components/ContactComp.vue'
     display: flex;
     align-items: center;
     height: 95vh;
-    margin-bottom: 12rem;
+    margin-bottom: 7rem;
   }
 
   .text {
