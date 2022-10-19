@@ -112,8 +112,16 @@ import ContactComp from '../components/ContactComp.vue'
   max-width: 10rem;
 }
 
+@media only screen and (max-width: 1000px) {
+  #home {
+    margin-bottom: 5rem;
+  }
+
+}
+
 
 @media only screen and (max-width: 880px) {
+  
   .button {
     display: flex;
     flex-direction: column;

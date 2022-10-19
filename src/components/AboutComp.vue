@@ -168,6 +168,7 @@ li::before {
 @media only screen and (max-width: 1300px) {
   #about {
     flex-direction: column;
+    gap: 7rem;
     margin-bottom: 0;
   }
 
