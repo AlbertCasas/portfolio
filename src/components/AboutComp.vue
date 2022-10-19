@@ -84,12 +84,11 @@ const closeTag = ref("</ul>");
   background-color: #1DFCDB;
   text-decoration: none;
   text-align: center;
-  padding: 1rem 3rem;
+  padding: 1rem 4.5rem;
   border-radius: 7px;
   color: #000000;
   font-weight: 900;
-  margin-right: 4rem;
-  max-width: 30%;
+  max-width: 10rem;
   font-size: 1.5rem;
 }
 
@@ -206,6 +205,10 @@ li::before {
 @media only screen and (max-width: 400px) {
   .skills-flex {
     gap: 2.2rem;
+  }
+
+  .contact-me {
+    padding: 1rem 3rem;
   }
 }
 

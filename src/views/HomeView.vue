@@ -97,7 +97,7 @@ import ContactComp from '../components/ContactComp.vue'
   color: #000000;
   font-weight: 900;
   margin-right: 4rem;
-  
+  max-width: 10rem;
 }
 
 .portfolio-button {
@@ -109,6 +109,7 @@ import ContactComp from '../components/ContactComp.vue'
   color: white;
   font-weight: 900;
   border: .1rem solid white;
+  max-width: 10rem;
 }
 
 
@@ -120,7 +121,11 @@ import ContactComp from '../components/ContactComp.vue'
   }
 
   .contact-me, .portfolio-button {
-    max-width: 50%;
+    width: 10rem;
+  }
+
+  .contact-me {
+    padding: 1rem 3rem;
   }
 
   
