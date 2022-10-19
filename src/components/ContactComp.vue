@@ -3,7 +3,7 @@
     <div class="form-wrapper">
         <div class="form-message">
             <h1 class="contact-title"><span class="big">CONTACT</span> FORM</h1>
-            <p class="message">If you are interested in working with me <span>send me a message</span> or contact me on <a class="linkedin-link" href="https://www.linkedin.com/in/albertcasas3d/" target="_blank"><span>Linkedin</span></a>.</p>
+            <p class="message">If you are interested in working with me send me a message or contact me on <a class="linkedin-link" href="https://www.linkedin.com/in/albertcasas3d/" target="_blank"><span>Linkedin</span></a>.</p>
             <div class="contact-form">
                 <form class="form">
                     <div class="name-email">
@@ -338,6 +338,14 @@ const sendMessage = () => {
 
     #contact {
         margin-bottom: 10rem;
+    }
+
+    .contact-title {
+    font-size: 2.2rem;
+    }
+
+    .big {
+    font-size: 2.2rem;
     }
 
     

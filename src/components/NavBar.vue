@@ -145,4 +145,10 @@ const close = ref(" />")
     }
 }
 
+@media only screen and (max-width: 400px) {
+    .icons {
+        gap: 1rem;
+    }
+}
+
 </style>

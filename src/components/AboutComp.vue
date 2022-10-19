@@ -210,6 +210,14 @@ li::before {
   .contact-me {
     padding: 1rem 3rem;
   }
+
+  .about-title {
+    font-size: 2.2rem;
+  }
+
+  .big {
+    font-size: 2.2rem;
+  }
 }
 
 @media only screen and (max-width: 340px) {

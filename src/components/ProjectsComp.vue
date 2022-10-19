@@ -197,6 +197,10 @@
     gap: 2.5rem;
   }
 
+  .projects::-webkit-scrollbar {
+    display: none;
+  }
+
   .single-project {
     width: 300px;
   }
@@ -230,6 +234,16 @@
 
   .single-project p, span {
     font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .project-title {
+    font-size: 2.2rem;
+  }
+
+  .big {
+    font-size: 2.2rem;
   }
 }
 
