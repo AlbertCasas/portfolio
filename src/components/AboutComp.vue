@@ -15,7 +15,7 @@
             Interested in keep learning everyday and working on 
             ambitious projects to keep growing as a developer.
         </p>
-        <a class="contact-me" href="#contact">CONTACT ME</a>
+        <router-link class="contact-me" to="/contact">CONTACT ME</router-link>
     </div>
     <div class="all-skills">
         <h1 class="skills-title">SKILLS</h1>
@@ -59,10 +59,10 @@ const closeTag = ref("</ul>");
 #about {
   background-color: #1c1c1c;
   width: 100%;
+  min-height: 78vh;
   display: flex;
   gap: 12%;
-  align-items: flex-start;
-  margin-bottom: 7rem;
+  margin-bottom: 1rem;
 }
 
 .text {
@@ -70,10 +70,10 @@ const closeTag = ref("</ul>");
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  margin-top: 7rem;
 }
 
 .about-title {
+  margin-top: 4rem;
   color: white;
   font-weight: 900;
   font-size: 2.5rem;
@@ -121,10 +121,10 @@ span {
   font-weight: 900;
   font-size: 2.5rem;
   cursor: default;
+  margin-top: 4rem;
 }
 
 .all-skills {
-    margin-top: 7rem;
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -169,6 +169,7 @@ li::before {
 @media only screen and (max-width: 1300px) {
   #about {
     flex-direction: column;
+    margin-bottom: 0;
   }
 
   .text {

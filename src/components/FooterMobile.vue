@@ -34,7 +34,7 @@ const close = ref(" />")
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 5rem;
+    margin-top: 4rem;
 
 }
 
@@ -69,7 +69,7 @@ const close = ref(" />")
     text-decoration: none;
     background-color: #1DFCDB;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     cursor: pointer;
 }
 
@@ -108,9 +108,6 @@ const close = ref(" />")
         font-size: 1.4rem;
     }
 
-    .footer {
-        margin-top: 15rem;
-    }
 
 }
 @media only screen and (max-width: 980px) {

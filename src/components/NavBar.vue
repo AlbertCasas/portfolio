@@ -68,7 +68,7 @@ const close = ref(" />")
     text-decoration: none;
     background-color: #000000;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     cursor: pointer;
 }
 
@@ -78,7 +78,7 @@ const close = ref(" />")
 
 .icons {
     display: flex;
-    gap: 1.5rem;
+    gap: 3.5rem;
     background-color: #000000;
     margin-right: 5%;
     justify-content: flex-end;
@@ -127,11 +127,21 @@ const close = ref(" />")
 
     .icons {
         align-items: center;
-
+        gap: 2rem;
     }
 
     .nav-button {
         display: none;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .title {
+        font-size: 1.2rem;
+    }
+
+    .icons {
+        gap: 1.5rem;
     }
 }
 

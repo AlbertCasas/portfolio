@@ -3,11 +3,9 @@
   <NavBar />
   <section id="home">
     <div class="text">
-      <h1>Hello! <br>
-      I'm <span class="big">ALBERT</span>, <br>
-      Front End Developer.</h1>
-      <br><br><br>
-      <h2>How can I help you?</h2>
+      <h1>Hello! </h1>
+      <h1>I'm <span class="big">ALBERT</span>,</h1>
+      <h1>Front End Developer.</h1>
       <div class="button">
         <a class="contact-me" href="#contact">CONTACT ME</a>
         <a class="portfolio-button" href="#projects">VIEW PORTFOLIO</a>
@@ -47,7 +45,7 @@ import ContactComp from '../components/ContactComp.vue'
     display: flex;
     align-items: center;
     height: 95vh;
-    margin-bottom: 1rem;
+    margin-bottom: 12rem;
   }
 
   .text {
@@ -68,15 +66,6 @@ import ContactComp from '../components/ContactComp.vue'
   
   }
 
-  h2 {
-    font-size: 3.5rem;
-    color: white;
-    cursor: default;
-    max-width: 55rem;
-    background: transparent;
-    margin-bottom: 1rem;
-  }
-
 
   .tags {
     font-size: 1.2rem;
@@ -94,7 +83,7 @@ import ContactComp from '../components/ContactComp.vue'
 
 
 .button {
-  margin-top: 2rem;
+  margin-top: 4rem;
   background-color: transparent;
   font-size: 1.5rem;
 }
@@ -103,12 +92,12 @@ import ContactComp from '../components/ContactComp.vue'
   background-color: #1DFCDB;
   text-decoration: none;
   text-align: center;
-  padding: 1rem 3rem;
+  padding: 1rem 4.5rem;
   border-radius: 7px;
   color: #000000;
   font-weight: 900;
   margin-right: 4rem;
-  max-width: 30%;
+  
 }
 
 .portfolio-button {
@@ -119,9 +108,7 @@ import ContactComp from '../components/ContactComp.vue'
   border-radius: 7px;
   color: white;
   font-weight: 900;
-  margin-right: 4rem;
   border: .1rem solid white;
-  max-width: 30%;
 }
 
 

@@ -74,8 +74,12 @@ const sendMessage = () => {
 
 #contact {
     background-color:  #1c1c1c;
-    width: 100%;
+    
+    min-height: 80vh;
     margin-bottom: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 5%;
 }
 
 .form-wrapper {
@@ -91,15 +95,14 @@ const sendMessage = () => {
   color: white;
   font-weight: 900;
   font-size: 2.5rem;
-  margin-top: 7rem;
   margin-bottom: 3rem;
+  margin-top: 4rem;
 }
 
 .form-message {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    margin: 0 5% 0 5%;
 }
 
 .message {
@@ -201,13 +204,15 @@ const sendMessage = () => {
 
 
 @media only screen and (max-width: 1500px) {
-  .wrapper {
-    background-image: none;
-  }
+    
 
-  .contact-title {
+    .wrapper {
+    background-image: none;
+    }
+
+    .contact-title {
     display: block;
-  }
+    }
 
 }
 
@@ -240,9 +245,6 @@ const sendMessage = () => {
         max-width: 45rem;
     }
 
-    .form-message {
-        margin-left: 5rem;
-    }
     
     .name-email .input {
         width: 18rem;
@@ -255,9 +257,6 @@ const sendMessage = () => {
 
 @media only screen and (max-width: 880px) {
     
-    .form-message {
-        margin-left: 5rem;
-    }
 
     .contact-form {
         min-width: 40rem;
@@ -275,9 +274,6 @@ const sendMessage = () => {
 }
 
 @media only screen and (max-width: 850px) {
-    .form-message {
-        margin-left: 5rem;
-    }
 
     .message {
         max-width: 30rem
@@ -312,9 +308,7 @@ const sendMessage = () => {
         font-size: 1.2rem;
     }
 
-    .form-message {
-        margin-left: 3rem;
-    }
+    
 
     .contact-form {
         min-width: 25rem;
@@ -346,12 +340,7 @@ const sendMessage = () => {
         margin-bottom: 10rem;
     }
 
-    .form-message {
-        margin-left: 1.5rem;
-        margin-top: 2rem;
-        margin-bottom: 7rem;
-    }
-
+    
     .message {
         max-width: 20rem;
         font-size: 1.1rem;

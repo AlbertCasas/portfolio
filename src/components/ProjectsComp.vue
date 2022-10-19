@@ -1,12 +1,11 @@
 <template>
 <section id="projects">
   <h1 class="project-title">MY <span class="big">PROJECTS</span></h1>
-  <div class="wrapper">
     <div class="projects">
       <div class="single-project">
         <img src="https://i.ibb.co/SmPJhVK/note-it-card.png" alt="note it">
         <h2>NOTE IT!</h2>
-        <p>Task management App with authentication to register and login ti your account where you can create your tasks and mark them as completed, edit and delete them.</p>
+        <p>Task management App with authentication to register and login to your account where you can create your tasks and mark them as completed, edit them and delete them.</p>
         <span>Vue.js - Supabase</span>
         <a href="https://note-it-project.vercel.app/auth/login" target="_blank">VISIT</a>
       </div>
@@ -25,7 +24,6 @@
         <a href="https://circle-cloning.vercel.app/" target="_blank">VISIT</a>
       </div>
     </div>
-  </div>
 </section>
 </template>
 
@@ -42,18 +40,19 @@
 #projects {
   background-color: #1c1c1c;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 14rem;
 }
 
-.wrapper {
-  margin: 3rem 5%;
-}
 
 .project-title {
   color: white;
   font-weight: 900;
   font-size: 2.5rem;
   cursor: default;
-  margin: 7rem 0 3rem 5%;
+  margin: 4rem 0 3rem 5%;
 }
 
 .big {
@@ -65,32 +64,26 @@
   background-color: #1c1c1c;
 }
 
-.wrapper {
-  max-width: 100vw;
-  overflow: scroll;
-}
-
-.wrapper::-webkit-scrollbar {
-  display: none;
-}
-
 .projects {
+  margin: 3rem 5%;
+  max-width: 100vw;
+  overflow-x: scroll;
   display: flex;
   gap: 3rem;
 }
 
 
 .single-project {
-  width: 400px;
+  width: 500px;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
   background-color: #000000;
   border-radius: 20px 20px 0 0;
 }
 
 .single-project img {
-  width: 400px;;
+  width: 500px;;
   border-radius: 20px 20px 0 0;
 }
 
@@ -108,10 +101,18 @@
   cursor: default;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 .single-project p, span {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   margin-left: 1rem;
   margin-right: 1rem;
+}
+
+.single-project p {
+  min-height: 8rem;
 }
 
 .single-project a {
@@ -123,19 +124,31 @@
   background: #1DFCDB;
   font-size: 1.5rem;
   font-weight: 900;
-  padding: 1rem 3.5rem;
+  padding: 1rem 2.5rem;
   border-radius: 7px;
   margin-bottom: 1rem;
   cursor: pointer;
 }
 
 @media only screen and (max-width: 1300px) {
+  #projects {
+    margin-bottom: 5rem;
+  }
+
   .single-project {
     width: 350px;
   }
 
   .single-project img {
     width: 350px;
+  }
+
+  .single-project p, span {
+    font-size: 1.3rem;
+  }
+
+  .single-project a {
+    font-size: 1.2rem;
   }
 }
 
@@ -159,6 +172,11 @@
   .single-project p, span {
     font-size: 1.1rem;
   }
+
+  .single-project a {
+    font-size: 1rem;
+    padding: .9rem 1.2rem;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -168,6 +186,10 @@
 
   .single-project img {
     width: 250px;
+  }
+
+  .single-project p, span {
+    font-size: 1rem;
   }
 }
 
