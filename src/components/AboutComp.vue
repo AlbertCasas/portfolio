@@ -189,6 +189,10 @@ li::before {
 }
 
 @media only screen and (max-width: 600px) {
+  #about {
+    gap: 4rem;
+  }
+
   .about-text {
     font-size: 1.3rem;
   }

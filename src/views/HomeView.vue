@@ -149,6 +149,10 @@ import ContactComp from '../components/ContactComp.vue'
 }
 
 @media only screen and (max-width: 600px) {
+  #home {
+    height: 85vh;
+  }
+
     h1 {
     font-size: 3rem;
   }

@@ -102,6 +102,7 @@
   cursor: default;
 }
 
+
 .single-project h2 {
   font-size: 2rem;
   margin-left: 1rem;
@@ -114,9 +115,6 @@
   height: 9px;
 }
 
-.projects::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 0px rgba(0, 0, 0, 0);
-}
 
 .projects::-webkit-scrollbar-thumb {
   height: 5px;
@@ -148,7 +146,7 @@
 }
 
 .single-project p {
-  min-height: 8rem;
+  min-height: 9rem;
 }
 
 .single-project a {
@@ -224,6 +222,10 @@
 }
 
 @media only screen and (max-width: 600px) {
+  #projects {
+    margin-bottom: 3rem;
+  }
+
   .single-project {
     width: 250px;
   }
