@@ -2,7 +2,7 @@
 <section id="projects">
   <h1 class="project-title">MY <span class="big">PROJECTS</span></h1>
     <div class="projects">
-      <div class="single-project">
+      <div class="single-project first">
         <img src="https://i.ibb.co/SmPJhVK/note-it-card.png" alt="note it">
         <h2>NOTE IT!</h2>
         <p>Task management App with authentication to register and login to your account where you can create your tasks and mark them as completed, edit them and delete them.</p>
@@ -16,7 +16,7 @@
         <span>Vue.js - Firebase</span>
         <a href="https://weather-app-zeta-sooty.vercel.app/" target="_blank">VISIT</a>
       </div>
-      <div class="single-project">
+      <div class="single-project last">
         <img src="https://i.ibb.co/ChVjQ5g/citcle-card.png" alt="note it">
         <h2>CIRCLE CLONE</h2>
         <p>Cloning of a website and making it responsive for mobiles and desktop. Also I imported the projects section information from a fake API and simulated the contact form.</p>
@@ -43,7 +43,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 14rem;
+  margin-bottom: 12rem;
 }
 
 
@@ -65,11 +65,11 @@
 }
 
 .projects {
-  margin: 3rem 5%;
+  margin: 3rem 0;
   max-width: 100vw;
   overflow-x: scroll;
   display: flex;
-  gap: 3rem;
+  gap: 10rem;
 }
 
 
@@ -80,6 +80,15 @@
   gap: 1.5rem;
   background-color: #000000;
   border-radius: 20px 20px 0 0;
+  margin: 0 0 2rem 0;
+}
+
+.first {
+  margin-left: 5%;
+}
+
+.last {
+  margin-right: 5%;
 }
 
 .single-project img {
@@ -101,8 +110,35 @@
   cursor: default;
 }
 
+.projects::-webkit-scrollbar {
+  height: 9px;
+}
+
+.projects::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 0px rgba(0, 0, 0, 0);
+}
+
+.projects::-webkit-scrollbar-thumb {
+  height: 5px;
+  background-color: #000000;
+}
+
+
+
+
 ::-webkit-scrollbar {
-  display: none;
+  width: 4px;
+  border: 1px solid #d5d5d5;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 0;
+  background: #1c1c1c;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 7px;
+  background: #000000;
 }
 
 .single-project p, span {
@@ -135,6 +171,10 @@
     margin-bottom: 5rem;
   }
 
+  .projects {
+    gap: 5rem;
+  }
+
   .single-project {
     width: 350px;
   }
@@ -154,7 +194,7 @@
 
 @media only screen and (max-width: 880px){
   .projects {
-    gap: 1.5rem;
+    gap: 2.5rem;
   }
 
   .single-project {

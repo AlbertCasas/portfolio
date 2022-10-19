@@ -62,7 +62,6 @@ const closeTag = ref("</ul>");
   min-height: 78vh;
   display: flex;
   gap: 12%;
-  margin-bottom: 1rem;
 }
 
 .text {
