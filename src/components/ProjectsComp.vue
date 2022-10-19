@@ -74,7 +74,7 @@
 
 
 .single-project {
-  width: 500px;
+  width: 400px;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -92,7 +92,7 @@
 }
 
 .single-project img {
-  width: 500px;;
+  width: 400px;;
   border-radius: 20px 20px 0 0;
 }
 

@@ -181,9 +181,9 @@ const sendMessage = () => {
 
 .button {
     width: 25rem;
-    padding: .8rem;
+    padding: 1rem;
     margin: 2rem 2rem 2rem 2rem;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 900;
     color: #1c1c1c;
     background-color: #1DFCDB;
