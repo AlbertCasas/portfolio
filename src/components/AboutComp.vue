@@ -11,7 +11,7 @@
             I started my developer career learning on my own and decided to make a Front-End Developer Bootcamp at 
             Ironhack where I learnt a lot and found the 
             passion for this job. <br /><br />
-            Interested in learn everyday and work on 
+            Interested in learning everyday and working on 
             ambitious projects to keep growing as a developer.
         </p>
         <router-link class="contact-me" to="/contact">CONTACT ME</router-link>
