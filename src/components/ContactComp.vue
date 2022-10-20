@@ -270,6 +270,12 @@ const sendMessage = () => {
     .err-msg-wrapper {
     width: 25rem;
 }
+
+.button {
+    font-size: 1rem;
+    padding: .9rem 1.2rem;
+  }
+
     
 }
 
