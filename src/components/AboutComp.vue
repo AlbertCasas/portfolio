@@ -167,7 +167,7 @@ li::before {
 @media only screen and (max-width: 1300px) {
   #about {
     flex-direction: column;
-    gap: 11rem;
+    gap: 7rem;
     margin-bottom: 0;
   }
 
@@ -182,7 +182,7 @@ li::before {
   .all-skills {
     margin-left: 5%;
     margin-right: 5%;
-    margin-bottom: 7rem;
+    margin-bottom: 5rem;
   }
 
 
