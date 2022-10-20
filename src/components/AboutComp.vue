@@ -8,7 +8,7 @@
             I love JavaScript and I really enjoy making intuitive and 
             dynamic websites. <br /><br />
             Quick learner and problem solving oriented person. 
-            I started my developer career learning on my own, and decided to make a Front-End Developer Bootcamp at 
+            I started my developer career learning on my own and decided to make a Front-End Developer Bootcamp at 
             Ironhack where I really learnt a lot and found the 
             passion for this job. <br /><br />
             Interested in keep learning everyday and working on 
@@ -105,7 +105,7 @@ span {
   color: white;
   font-size: 1.5rem;
   cursor: default;
-  max-width: 42rem;
+  max-width: 43rem;
 }
 
 .about-big {
