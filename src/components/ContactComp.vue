@@ -76,7 +76,7 @@ const sendMessage = () => {
     background-color:  #1c1c1c;
     
     min-height: 80vh;
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
     display: flex;
     justify-content: flex-start;
     margin-left: 5%;

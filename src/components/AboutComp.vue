@@ -61,7 +61,7 @@ const closeTag = ref("</ul>");
   width: 100%;
   display: flex;
   gap: 12%;
-  margin-bottom: 7rem;
+  margin-bottom: 5rem;
 }
 
 .text {

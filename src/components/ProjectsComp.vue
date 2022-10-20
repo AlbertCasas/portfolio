@@ -44,7 +44,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 7rem;
+  margin-bottom: 5rem;
 }
 
 
