@@ -106,7 +106,7 @@ span {
   color: white;
   font-size: 1.5rem;
   cursor: default;
-  max-width: 39rem;
+  max-width: 42rem;
 }
 
 .about-big {
