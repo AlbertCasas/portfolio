@@ -32,8 +32,6 @@ import {ref} from 'vue'
 import projectFirestore from "../firebase/firebaseconfig"
 
 
-const openTag = ref("<form>")
-const closeTag = ref("</form>")
 const name = ref("")
 const email = ref("")
 const subject = ref("")

@@ -163,7 +163,7 @@ li::before {
   
 }
 
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 1360px) {
   #about {
     flex-direction: column;
     gap: 7rem;
